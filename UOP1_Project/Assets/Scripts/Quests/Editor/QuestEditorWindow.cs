@@ -477,11 +477,11 @@ public class QuestEditorWindow : EditorWindow
 			}
 		};
 		listview.itemsSource = itemsSource;
-		listview.itemHeight = 16;
+		listview.fixedItemHeight = 16;
 		listview.selectionType = UnityEngine.UIElements.SelectionType.Single;
 		listview.style.flexGrow = 1.0f;
 
-		listview.Refresh();
+		listview.Rebuild();
 		if (itemsSource.Length > 0)
 			listview.selectedIndex = 0;
 	}
